@@ -18,7 +18,7 @@ class WearSpider(scrapy.Spider):
                 'Giá cũ': response.css('div.price-box > span.old-price > del.price.product-price-old.sale::text').get()
             }
 
-            with open('C:/Users/Thinh/PycharmProjects/Crawl_data/tutorial/tutorial/spiders/output/outputtiki.txt', 'a', encoding='utf8') as f:
+            with open('/tutorial/tutorial/spiders/output/outputTMDT.txt', 'a', encoding='utf8') as f:
                 f.write(json.dumps(data, ensure_ascii=False))
                 f.write('\n')
                 self.CRAWLED_COUNT += 1
